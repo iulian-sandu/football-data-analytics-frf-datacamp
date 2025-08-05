@@ -1,0 +1,446 @@
+[
+  {
+    "name": "id",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'id'"
+  },
+  {
+    "name": "matchId",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'matchId'"
+  },
+  {
+    "name": "matchPeriod",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'matchPeriod'"
+  },
+  {
+    "name": "minute",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'minute'"
+  },
+  {
+    "name": "second",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'second'"
+  },
+  {
+    "name": "matchTimestamp",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'matchTimestamp'"
+  },
+  {
+    "name": "videoTimestamp",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'videoTimestamp'"
+  },
+  {
+    "name": "relatedEventId",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'relatedEventId'"
+  },
+  {
+    "name": "type_primary",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'type.primary'"
+  },
+  {
+    "name": "type_secondary",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'type.secondary'"
+  },
+  {
+    "name": "location_x",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'location.x'"
+  },
+  {
+    "name": "location_y",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'location.y'"
+  },
+  {
+    "name": "team_id",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'team.id'"
+  },
+  {
+    "name": "team_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'team.name'"
+  },
+  {
+    "name": "team_formation",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'team.formation'"
+  },
+  {
+    "name": "opponentTeam_id",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'opponentTeam.id'"
+  },
+  {
+    "name": "opponentTeam_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'opponentTeam.name'"
+  },
+  {
+    "name": "opponentTeam_formation",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'opponentTeam.formation'"
+  },
+  {
+    "name": "player_id",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'player.id'"
+  },
+  {
+    "name": "player_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'player.name'"
+  },
+  {
+    "name": "player_position",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'player.position'"
+  },
+  {
+    "name": "pass_accurate",
+    "type": "BOOL",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.accurate'"
+  },
+  {
+    "name": "pass_angle",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.angle'"
+  },
+  {
+    "name": "pass_height",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.height'"
+  },
+  {
+    "name": "pass_length",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.length'"
+  },
+  {
+    "name": "pass_recipient_id",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.recipient.id'"
+  },
+  {
+    "name": "pass_recipient_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.recipient.name'"
+  },
+  {
+    "name": "pass_recipient_position",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.recipient.position'"
+  },
+  {
+    "name": "pass_endLocation_x",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.endLocation.x'"
+  },
+  {
+    "name": "pass_endLocation_y",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'pass.endLocation.y'"
+  },
+  {
+    "name": "shot_bodyPart",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.bodyPart'"
+  },
+  {
+    "name": "shot_isGoal",
+    "type": "BOOL",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.isGoal'"
+  },
+  {
+    "name": "shot_onTarget",
+    "type": "BOOL",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.onTarget'"
+  },
+  {
+    "name": "shot_goalZone",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.goalZone'"
+  },
+  {
+    "name": "shot_xg",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.xg'"
+  },
+  {
+    "name": "shot_postShotXg",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.postShotXg'"
+  },
+  {
+    "name": "shot_goalkeeperActionId",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.goalkeeperActionId'"
+  },
+  {
+    "name": "shot_goalkeeper",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.goalkeeper'"
+  },
+  {
+    "name": "shot_goalkeeper_id",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.goalkeeper.id'"
+  },
+  {
+    "name": "shot_goalkeeper_name",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'shot.goalkeeper.name'"
+  },
+  {
+    "name": "groundDuel",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'groundDuel'"
+  },
+  {
+    "name": "aerialDuel",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'aerialDuel'"
+  },
+  {
+    "name": "infraction",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'infraction'"
+  },
+  {
+    "name": "carry_progression",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'carry.progression'"
+  },
+  {
+    "name": "carry_endLocation_x",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'carry.endLocation.x'"
+  },
+  {
+    "name": "carry_endLocation_y",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'carry.endLocation.y'"
+  },
+  {
+    "name": "possession_id",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.id'"
+  },
+  {
+    "name": "possession_duration",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.duration'"
+  },
+  {
+    "name": "possession_types",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.types'"
+  },
+  {
+    "name": "possession_eventsNumber",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.eventsNumber'"
+  },
+  {
+    "name": "possession_eventIndex",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.eventIndex'"
+  },
+  {
+    "name": "possession_attack",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.attack'"
+  },
+  {
+    "name": "possession_startLocation_x",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.startLocation.x'"
+  },
+  {
+    "name": "possession_startLocation_y",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.startLocation.y'"
+  },
+  {
+    "name": "possession_endLocation_x",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.endLocation.x'"
+  },
+  {
+    "name": "possession_endLocation_y",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.endLocation.y'"
+  },
+  {
+    "name": "possession_team_id",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.team.id'"
+  },
+  {
+    "name": "possession_team_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.team.name'"
+  },
+  {
+    "name": "possession_team_formation",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.team.formation'"
+  },
+  {
+    "name": "possession_attack_withShot",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.attack.withShot'"
+  },
+  {
+    "name": "possession_attack_withShotOnGoal",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.attack.withShotOnGoal'"
+  },
+  {
+    "name": "possession_attack_withGoal",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.attack.withGoal'"
+  },
+  {
+    "name": "possession_attack_flank",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.attack.flank'"
+  },
+  {
+    "name": "possession_attack_xg",
+    "type": "FLOAT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'possession.attack.xg'"
+  },
+  {
+    "name": "label",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'label'"
+  },
+  {
+    "name": "date",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'date'"
+  },
+  {
+    "name": "dateutc",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'dateutc'"
+  },
+  {
+    "name": "status",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'status'"
+  },
+  {
+    "name": "competitionId",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'competitionId'"
+  },
+  {
+    "name": "seasonId",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'seasonId'"
+  },
+  {
+    "name": "roundId",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'roundId'"
+  },
+  {
+    "name": "gameweek",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'gameweek'"
+  },
+  {
+    "name": "points",
+    "type": "INT64",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'points'"
+  },
+  {
+    "name": "Home_Away",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inferred from CSV column 'Home_Away'"
+  }
+]
