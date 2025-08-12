@@ -13,4 +13,6 @@
 ## Future Enhancements
 
 - Automate infrastructure deployment using Terraform.
+- Automate dashboard creating and sharing.
+- Integrate with AI layer to create dashboards on demand based on user prompt.
 - Alerting, cost control and monitoring.
