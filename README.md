@@ -2,11 +2,15 @@
 
 ## Overview
 
-
+## Features and functionality
 
 ## Architecture
 
 ![Alt text](data-flow-architecture-latest.jpeg "flow architecture")
 
+### Components
 
-## Features
+## Future Enhancements
+
+- Automate infrastructure deployment using Terraform.
+- Alerting, cost control and monitoring.
