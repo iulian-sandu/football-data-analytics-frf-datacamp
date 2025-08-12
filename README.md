@@ -28,6 +28,6 @@ End-to-end football data analytics flow built on Google Cloud services. The curr
 - Automate infrastructure deployment using Terraform.
 - Automate dashboard creating and sharing.
 - Implement GitOps process for CICD.
-- Integrate with AI layer to create dashboards on demand based on user prompt.
+- Integrate with AI layer (VertexAI, OpenAI) to create dashboards on demand based on user prompt.
 - Alerting, cost control and monitoring.
 - Split the main Python function into multiple Cloud Run services.
