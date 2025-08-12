@@ -1,5 +1,5 @@
 import base64
-import functions_framework
+import functions_framework # type: ignore
 import json
 import datetime
 from google.cloud import storage
