@@ -4,6 +4,34 @@ import json
 import datetime
 from google.cloud import storage
 from google.cloud import bigquery
+import random
+
+def data_transformation():
+    """
+    Transforms data in BigQuery by calculating average statistics for each team.
+    The results are stored in a new table.
+    """
+    sql = """
+        SELECT 
+            t.name as team_name,
+            AVG(t.statistics.wins) AS avg_wins,
+            AVG(t.statistics.draws) AS avg_draws,
+            AVG(t.statistics.losses) AS avg_losses
+        FROM 
+            `spatial-tempo-425409-i2.main_dataset.auto_upload_table` as t
+        GROUP BY
+            t.name;
+    """
+    client = bigquery.Client()
+    table_ref = f"spatial-tempo-425409-i2.main_dataset.auto_filtered_latest"
+
+    job_config = bigquery.QueryJobConfig(
+        destination=table_ref,
+        write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE
+    )
+    query_job = client.query(sql, job_config=job_config)
+
+    return query_job.result()
 
 def upload_bigquery(filename):
     """
@@ -34,10 +62,14 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(destination_blob_name)
+    
     generation_match_precondition = 0
+
     blob.upload_from_filename(source_file_name, if_generation_match=generation_match_precondition)
 
-    print(f"File {source_file_name} uploaded to {destination_blob_name}.")
+    print(
+        f"File {source_file_name} uploaded to {destination_blob_name}."
+    )
 
 @functions_framework.cloud_event
 def hello_pubsub(cloud_event):
@@ -48,16 +80,21 @@ def hello_pubsub(cloud_event):
     """
     pubsub_message = base64.b64decode(cloud_event.data["message"]["data"]).decode('utf-8')
     
+    random_month = random.randint(1, 12)
+    random_wins = random.randint(1, 20)
+    random_draws = random.randint(1, 5)
+    random_losses = random.randint(2, 6)
+
     dummy_data = {
         "id": 1,
         "name": "Dinamo",
         "league": "Liga 1",
-        "season": 2023,
+        "month": random_month,
         "statistics": {
             "matches_played": 30,
-            "wins": 20,
-            "draws": 5,
-            "losses": 5,
+            "wins": random_wins,
+            "draws": random_draws,
+            "losses": random_losses,
             "goals_for": 60,
             "goals_against": 30
         }
@@ -75,6 +112,9 @@ def hello_pubsub(cloud_event):
 
             upload_bigquery(f'{unique_id}_processed.jsonl')
             print('Data uploaded to BigQuery successfully.')
+
+            data_transformation()
+            print('Data transformation completed successfully.')
         except Exception as e:
             print(f"An unexpected error occurred: {e}")  
     else:
