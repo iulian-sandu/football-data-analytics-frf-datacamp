@@ -6,7 +6,7 @@
 
 ## Architecture
 
-![Alt text](data-flow-architecture.jpeg "a title")
+![Alt text](data-flow-architecture-latest.jpeg "flow architecture")
 
 
 ## Features
