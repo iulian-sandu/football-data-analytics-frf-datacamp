@@ -19,7 +19,9 @@ End-to-end football data analytics flow built on Google Cloud services. The curr
 
 1. **Cloud Scheduler** – Runs on a defined schedule and publishes a message to a Pub/Sub topic to start the automated process.
 2. **Pub/Sub** – Receives the scheduled message and triggers the main serverless Python service.
-
+3. **Cloud Run** - Main Python service responsible for data ingestion and upload.
+4. **BigQuery** - Managed, serverless data warehouse for storing raw and transformed data.
+5. **Looker Studio** - Visualization layer using BigQuery as the data source.
 
 ## Future Enhancements
 
